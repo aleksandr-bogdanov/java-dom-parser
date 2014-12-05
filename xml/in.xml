@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<university>
+    <student>
+        <first-name>Konstantin</first-name>
+        <last-name>Kostikov</last-name>
+        <birthday>19931207</birthday>
+        <course>4</course>
+        <group>3</group>
+    </student>
+    <student>
+        <first-name>Dmitry</first-name>
+        <last-name>Bugakov</last-name>
+        <birthday>19921205</birthday>
+        <course>5</course>
+        <group>6</group>
+    </student>
+</university>
