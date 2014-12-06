@@ -7,7 +7,7 @@ import org.joda.time.format.DateTimeFormatter;
 /**
  * Student class
  */
-public final class Student {
+public final class Student implements Comparable<Student> {
     public static final DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyyMMdd");
 
     private final String   firstName;
@@ -17,7 +17,7 @@ public final class Student {
     private final int      group;
 
     // Builder-only access
-    private Student(
+    private Student (
             final String firstName,
             final String lastName,
             final DateTime birthday,
@@ -30,6 +30,7 @@ public final class Student {
         this.course     = course;
         this.group      = group;
     }
+
 
     public String getFirstName() {
         return this.firstName;
@@ -56,6 +57,10 @@ public final class Student {
                 ", course=" + course +
                 ", group=" + group +
                 '}';
+    }
+
+    public int compareTo(Student o) {
+        return (firstName + lastName).compareTo(o.getFirstName() + o.getLastName());
     }
 
     public static class StudentBuilder {

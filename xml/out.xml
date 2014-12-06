@@ -1,1 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><university><student><first-name>Konstantin</first-name><last-name>Kostikov</last-name><birthday>1993-12-07T00:00:00.000+03:00</birthday><course>4</course><group>3</group></student><student><first-name>Dmitry</first-name><last-name>Bugakov</last-name><birthday>1992-12-05T00:00:00.000+03:00</birthday><course>5</course><group>6</group></student><student><first-name>Andrey</first-name><last-name>Panevin</last-name><birthday>1993-02-14T00:00:00.000+03:00</birthday><course>4</course><group>3</group></student><student><first-name>Alexander</first-name><last-name>Yakovlev</last-name><birthday>1993-09-23T00:00:00.000+04:00</birthday><course>4</course><group>8</group></student></university>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<university>
+    <student>
+        <first-name>Alexander</first-name>
+        <last-name>Yakovlev</last-name>
+        <birthday>1993-09-23T00:00:00.000+04:00</birthday>
+        <course>4</course>
+        <group>8</group>
+    </student>
+    <student>
+        <first-name>Andrey</first-name>
+        <last-name>Panevin</last-name>
+        <birthday>1993-02-14T00:00:00.000+03:00</birthday>
+        <course>4</course>
+        <group>3</group>
+    </student>
+    <student>
+        <first-name>Dmitry</first-name>
+        <last-name>Bugakov</last-name>
+        <birthday>1992-12-05T00:00:00.000+03:00</birthday>
+        <course>5</course>
+        <group>6</group>
+    </student>
+    <student>
+        <first-name>Konstantin</first-name>
+        <last-name>Kostikov</last-name>
+        <birthday>1993-12-07T00:00:00.000+03:00</birthday>
+        <course>4</course>
+        <group>3</group>
+    </student>
+</university>
