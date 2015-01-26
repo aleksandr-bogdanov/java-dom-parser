@@ -1,13 +1,11 @@
 package ru.vsu.amm.java.dom_parser;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            // ToDo: interface
             List<Student> students = new StudentXmlReader().parseXml("xml/in.xml");
 
             Student st1 = new Student.StudentBuilder()
@@ -28,11 +26,10 @@ public class Main {
                     .build();
             students.add(st2);
 
-            Collections.sort(students);
+            Collections.sort(students, new NameComparator());
 
             StudentXmlWriter studentXmlWriter = new StudentXmlWriter();
             studentXmlWriter.writeXml(students, "xml/out.xml");
-
 
         } catch (Exception e) {
             e.printStackTrace();
