@@ -4,10 +4,12 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.util.Comparator;
+
 /**
  * Student class
  */
-public final class Student implements Comparable<Student> {
+public final class Student {
     public static final DateTimeFormatter fmt = DateTimeFormat.forPattern("yyyyMMdd");
 
     private final String   firstName;
@@ -59,10 +61,6 @@ public final class Student implements Comparable<Student> {
                 '}';
     }
 
-    public int compareTo(Student o) {
-        return (firstName + lastName).compareTo(o.getFirstName() + o.getLastName());
-    }
-
     public static class StudentBuilder {
         private String   nestedFirstName;
         private String   nestedLastName;
@@ -101,5 +99,12 @@ public final class Student implements Comparable<Student> {
         public Student build() {
             return new Student(nestedFirstName, nestedLastName, nestedBirthday, nestedCourse, nestedGroup);
         }
+    }
+}
+
+class NameComparator implements Comparator<Student> {
+    @Override
+    public int compare(Student a, Student b) {
+        return (a.getFirstName() + a.getLastName()).compareToIgnoreCase(b.getFirstName() + b.getLastName());
     }
 }
